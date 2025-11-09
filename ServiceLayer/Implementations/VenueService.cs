@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace ServiceLayer.Services
 {
-    public class VenueService(AppDbContext context, IConfiguration configuration, IMapper mapper) : IVenueService
+    public class VenueService(AppDbContext context, IMapper mapper) : IVenueService
     {
         public async Task<VenueCreationResponse> CreateVenue(VenueCreationRequest request, string imagePath)
         {

@@ -19,6 +19,15 @@ builder.Services.AddAutoMapper(cfg =>
 {
     cfg.AddProfile(new VenueProfile()); 
 });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000") // Fe port
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

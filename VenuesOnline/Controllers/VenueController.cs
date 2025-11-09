@@ -1,5 +1,6 @@
 ﻿using DataLayer.Dtos;
 using DataLayer.Dtos.Request;
+using DataLayer.Dtos.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services;
@@ -38,7 +39,7 @@ namespace FamousVenues.Controllers
             return  NoContent();
         }
         [HttpPost("getvenuesbybounding")]
-        public async Task<ActionResult<VenueResponse>> GetVenue(VenuesRequest request)
+        public async Task<ActionResult<List<VenueResponse>>> GetVenue(VenuesRequest request)
         {
             var baseUrl = $"{Request.Scheme}://{Request.Host}";
             var result = await venueService.GetVenues(request, baseUrl);
@@ -50,7 +51,7 @@ namespace FamousVenues.Controllers
         }
 
         [HttpPost("ratevenue")]
-        public async Task<IActionResult> RateVenue(RateVenueRequest request)
+        public async Task<ActionResult<VenueRatingResponse>> RateVenue(RateVenueRequest request)
         {
             var result = await venueService.RateVenueAsync(request);
             if (result is null)
