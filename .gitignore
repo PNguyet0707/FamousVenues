@@ -19,4 +19,4 @@ publish/
 
 # Secrets
 appsettings.Development.json
-VenueOnline/VenueImages/
+VenuesOnline/VenueImages/
