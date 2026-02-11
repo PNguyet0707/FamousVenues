@@ -9,6 +9,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{A1B1FBE6-3B73-4DFF-99A2-01DE7EA80D68}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureServiceBusDemo", "AzureServiceBusDemo", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBSender", "SBSender\SBSender.csproj", "{8162D81A-D496-4900-97B0-36C649DDAB04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBShared", "SBShared\SBShared.csproj", "{DCF24EDD-3F6A-4F73-B927-B9FC9F301E17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOPSamples", "OOPSamples", "{46FF0865-F03D-4231-86A8-004DAC588D2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectInitializationOrder", "ObjectInitialationOrder\ObjectInitializationOrder.csproj", "{CED9E2E8-3997-43BB-8E20-3AB7A684599C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SBReceiver", "SBReceiver\SBReceiver.csproj", "{91784C84-BCEB-715B-046F-9DFE3C1470B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +39,31 @@ Global
 		{A1B1FBE6-3B73-4DFF-99A2-01DE7EA80D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1B1FBE6-3B73-4DFF-99A2-01DE7EA80D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1B1FBE6-3B73-4DFF-99A2-01DE7EA80D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8162D81A-D496-4900-97B0-36C649DDAB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8162D81A-D496-4900-97B0-36C649DDAB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8162D81A-D496-4900-97B0-36C649DDAB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8162D81A-D496-4900-97B0-36C649DDAB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF24EDD-3F6A-4F73-B927-B9FC9F301E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF24EDD-3F6A-4F73-B927-B9FC9F301E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF24EDD-3F6A-4F73-B927-B9FC9F301E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF24EDD-3F6A-4F73-B927-B9FC9F301E17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED9E2E8-3997-43BB-8E20-3AB7A684599C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED9E2E8-3997-43BB-8E20-3AB7A684599C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED9E2E8-3997-43BB-8E20-3AB7A684599C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED9E2E8-3997-43BB-8E20-3AB7A684599C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91784C84-BCEB-715B-046F-9DFE3C1470B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91784C84-BCEB-715B-046F-9DFE3C1470B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91784C84-BCEB-715B-046F-9DFE3C1470B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91784C84-BCEB-715B-046F-9DFE3C1470B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8162D81A-D496-4900-97B0-36C649DDAB04} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{DCF24EDD-3F6A-4F73-B927-B9FC9F301E17} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CED9E2E8-3997-43BB-8E20-3AB7A684599C} = {46FF0865-F03D-4231-86A8-004DAC588D2B}
+		{91784C84-BCEB-715B-046F-9DFE3C1470B7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7C462E54-D4BB-473D-956D-8234C5730196}

@@ -9,8 +9,6 @@ using ServiceLayer.ExceptionHandler;
 using ServiceLayer.Implementations;
 using ServiceLayer.Interfaces;
 using ServiceLayer.Services;
-using System.Net;
-using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
