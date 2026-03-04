@@ -1,6 +1,3 @@
-using Azure.Messaging.ServiceBus;
-using SBSender.Services.Interfaces;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,8 +7,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton(_ => new ServiceBusClient(builder.Configuration.GetConnectionString("AzureServiceBus")));
-builder.Services.AddTransient<IQueueService, QueueService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

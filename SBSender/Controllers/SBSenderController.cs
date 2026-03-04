@@ -9,13 +9,10 @@ namespace SBSender.Controllers
     public class SBSenderController(IQueueService queueService) : Controller
     {
         [HttpPost("sendmessage")]
-        public async Task<ActionResult<bool>> PublishMessage(PersonModel person)
+        public async Task<ActionResult<bool>> PublishMessage(string  xinchao2026)
         {
-            if (person is null)
-            {
-                return false;   
-            }
-            await queueService.SendMessageAsync(person);
+            
+            await queueService.SendMessageAsync(xinchao2026);
             return true;
         }
         [HttpPost("sendmessages")]

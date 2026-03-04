@@ -1,5 +1,4 @@
-using Azure.Messaging.ServiceBus;
-using SBSender.Services.Interfaces;
+using RabbitMqService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,9 +8,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<IRabbitService, RabbitService>();
 
-builder.Services.AddSingleton(_ => new ServiceBusClient(builder.Configuration.GetConnectionString("AzureServiceBus")));
-builder.Services.AddTransient<IQueueService, QueueService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
