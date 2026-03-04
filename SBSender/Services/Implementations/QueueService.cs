@@ -18,10 +18,10 @@ public class QueueService : IQueueService
     public async Task SendMessageAsync<T>(T serviceBusMessage)
     {
         var sender = _serviceBusClient.CreateSender(queueName);
-        string messageBody = JsonSerializer.Serialize(serviceBusMessage);
-        var message = new ServiceBusMessage(Encoding.UTF8.GetBytes(messageBody));
-        var scheduleTime = DateTimeOffset.UtcNow.AddMinutes(2);
-        await sender.ScheduleMessageAsync(message, scheduleTime);
+        //var messageBody = JsonSerializer.SerializeToUtf8Bytes(serviceBusMessage);
+        var message = new ServiceBusMessage(serviceBusMessage.ToString());
+        message.ContentType = "text/plain;charset=utf-8";
+        await sender.SendMessageAsync(message);
     }
     public async Task SendBatchMessageAsync<T>(IList<T> serviceBusMessages)
     {
